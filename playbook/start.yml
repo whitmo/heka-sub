@@ -1,0 +1,5 @@
+---
+- debug: msg='STARTED'
+
+- name: start hekad
+  service: name=hekad state=started

@@ -1,0 +1,18 @@
+---
+name: heka-sub
+summary: "Subordinate for monitoring w/ hekad"
+description: "Subordinate for monitoring w/ hekad"
+subordinate: true
+provides:
+  monitoring:
+    interface: heka-config
+  heka-out:
+    interface: tcp
+requires:
+  host:
+    interface: juju-info
+    scope: container
+  elasticsearch:
+    interface: elasticsearch
+  influxdb:
+    interface: carbon

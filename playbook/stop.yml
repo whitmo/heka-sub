@@ -1,0 +1,4 @@
+---
+- debug: msg='STOP'
+
+- service: name=hekad state=stopped

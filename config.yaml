@@ -1,0 +1,9 @@
+---
+deb_url:
+  type: string
+  default: "https://github.com/mozilla-services/heka/releases/download/v0.8.2/heka_0.8.2_amd64.deb"
+  description: "Url to a debian package for heka"
+deb_md5:
+  type: string
+  default: dbd0b6151a7ce912a97440733b9a98b9
+  description: "MD5 for result of 'deb_url'"
