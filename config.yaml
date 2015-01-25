@@ -7,3 +7,10 @@ deb_md5:
   type: string
   default: dbd0b6151a7ce912a97440733b9a98b9
   description: "MD5 for result of 'deb_url'"
+docker_decoder:
+  type: string
+  default: ""
+  description: "Decoder for DockerInput to use"
+extra_config:
+  type: string
+  description: "A url to a tarball or a git repository with additional toml config or sandbox code to run through templating and add to your heka"

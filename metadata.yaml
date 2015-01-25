@@ -3,16 +3,35 @@ name: heka-sub
 summary: "Subordinate for monitoring w/ hekad"
 description: "Subordinate for monitoring w/ hekad"
 subordinate: true
+tags:
+  - monitoring
+  - ops
 provides:
-  monitoring:
-    interface: heka-config
-  heka-out:
+  heka:
+    interface: heka
+  log_ingest:
+    interface: logdir
+  metrics_in:
+    interface: udp
+  metrics_in:
     interface: tcp
+  carbon_in:
+    interface: tcp
+  docker_logging:
+    interface: socket
+    scope: container
 requires:
   host:
     interface: juju-info
     scope: container
-  elasticsearch:
+  aggregation:
+    interface: heka
+  elasticsearch_out:
     interface: elasticsearch
-  influxdb:
-    interface: carbon
+    optional: true
+  influxdb_out:
+    interface: influxdb-http
+    optional: true
+  carbon_out:
+    interface: tcp
+    optional: true
