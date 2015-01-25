@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  #handlers:
   vars:
     etcd: /etc/hekad
     srcd: /opt/hekad-src
@@ -39,7 +38,6 @@
     - include: config-changed.yml
       tags:
         - config-changed
-      notify: restart heka
 
     - name: start
       include: start.yml
