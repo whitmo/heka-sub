@@ -17,10 +17,15 @@
         - upgrade-charm
         - config-changed
 
-    - debug: msg="host relationship"
+    - debug: msg="relationship"
       tags:
         - host-relation-joined
         - host-relation-changed
+        - docker-relation-joined
+
+    - include: docker-relation.yml
+      tags:
+        - docker-relation-changed
 
     - include: install-upgrade.yml
       tags:
