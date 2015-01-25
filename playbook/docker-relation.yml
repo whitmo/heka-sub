@@ -1,0 +1,4 @@
+---
+- name: install docker config
+  template: src=files/docker.toml dest=/etc/heka.d/docker.toml
+  notify: restart heka
