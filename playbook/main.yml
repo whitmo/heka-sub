@@ -23,6 +23,10 @@
         - host-relation-changed
         - docker-relation-joined
 
+    - include: aggregation-changed.yml
+      tags:
+        - aggregation-relation-changed
+
     - include: docker-relation.yml
       tags:
         - docker-relation-changed

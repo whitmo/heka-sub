@@ -1,0 +1,7 @@
+---
+- set_fact:
+    remote_address: "{{ current_relation.hostname }}:{{ current_relation.port }}"
+
+- name: Render aggregation output template
+  template: src=files/heka-out.toml dest=/etc/heka.d/_aggregator-out.toml
+  notify: restart heka

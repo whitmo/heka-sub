@@ -1,0 +1,6 @@
+[ProtobufEncoder]
+
+[aggregator_output]
+type = "TcpOutput"
+address = "{{ remote_address }}"
+message_matcher = "Type != 'logfile' && Type != 'heka.counter-output' && Type != 'heka.all-report'"

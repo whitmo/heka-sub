@@ -10,10 +10,9 @@ hook_names = [
     'stop',
     'upgrade-charm',
     'config-changed',
-    'host-relation-joined',
     'host-relation-changed',
-    'docker-relation-joined',
-    'docker-relation-changed'
+    'docker-relation-changed',
+    'aggregation-relation-changed',
 ]
 
 hooks = AnsibleHooks(playbook_path='playbook/main.yml',
