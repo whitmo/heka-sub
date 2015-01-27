@@ -7,7 +7,7 @@ tags:
   - monitoring
   - ops
 provides:
-  heka:
+  heka_in:
     interface: heka
   log_ingest:
     interface: logdir
@@ -18,13 +18,13 @@ provides:
   carbon_in:
     interface: tcp
   docker_logging:
-    interface: socket
+    interface: docker-socket
     scope: container
 requires:
   host:
     interface: juju-info
     scope: container
-  aggregation:
+  heka_out:
     interface: heka
   elasticsearch_out:
     interface: elasticsearch
