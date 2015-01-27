@@ -11,7 +11,7 @@ hook_names = [
     'upgrade-charm',
     'config-changed',
     'host-relation-changed',
-    'docker-relation-changed',
+    'docker_logging-relation-changed',
     'aggregation-relation-changed',
 ]
 

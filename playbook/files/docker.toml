@@ -1,5 +1,5 @@
 [docker]
 Type="DockerLogInput"
-{{ if docker_decoder|bool }}
-decoder = "{{dockr_decoder}}"
-{{ endif }}
+{% if docker_decoder | bool %}
+decoder = "{{ docker_decoder }}"
+{% endif %}

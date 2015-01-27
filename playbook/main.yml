@@ -28,7 +28,7 @@
 
     - include: docker-relation.yml
       tags:
-        - docker-relation-changed
+        - docker_logging-relation-changed
 
     - include: install-upgrade.yml
       tags:
