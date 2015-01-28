@@ -24,7 +24,7 @@
 
     - include: aggregation-changed.yml
       tags:
-        - aggregation-relation-changed
+        - heka_out-relation-changed
 
     - include: docker-relation.yml
       tags:

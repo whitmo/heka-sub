@@ -12,7 +12,7 @@ hook_names = [
     'config-changed',
     'host-relation-changed',
     'docker_logging-relation-changed',
-    'aggregation-relation-changed',
+    'heka_out-relation-changed',
 ]
 
 hooks = AnsibleHooks(playbook_path='playbook/main.yml',
