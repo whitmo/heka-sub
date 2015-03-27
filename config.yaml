@@ -12,6 +12,13 @@ options:
     type: string
     default: ""
     description: "Decoder for DockerInput to use"
+  juju_agent:
+    type: boolean
+    description: |
+      Collect juju agent logs.
   extra_config:
     type: string
-    description: "A url to a tarball or a git repository with additional toml config or sandbox code to run through templating and add to your heka"
+    description: |
+      A url to a tarball or a git repository with additional toml
+      files or sandbox code to run through templating and add to your
+      heka
